@@ -37,30 +37,56 @@
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
         </scene>
-        <!--Drawing Page-->
+        <!--View Controller Drawing-->
         <scene sceneID="Mpz-0S-ZFC">
             <objects>
                 <viewController id="mTJ-kN-joJ" customClass="ViewControllerDrawing" customModule="DrawingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l5Y-d4-MRv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8g7-CM-YUm" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-yj-ilV">
+                                        <rect key="frame" x="175" y="8" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="n4K-av-2du"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8g7-CM-YUm" firstAttribute="top" secondItem="n4K-av-2du" secondAttribute="top" id="648-oj-V8H"/>
+                            <constraint firstItem="8g7-CM-YUm" firstAttribute="leading" secondItem="n4K-av-2du" secondAttribute="leading" id="Cfu-tQ-8h3"/>
+                            <constraint firstAttribute="bottom" secondItem="8g7-CM-YUm" secondAttribute="bottom" id="UI2-Te-CH9"/>
+                            <constraint firstAttribute="trailing" secondItem="8g7-CM-YUm" secondAttribute="trailing" id="mg2-dg-Qbl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Drawing Page" id="LCZ-Ae-6CN">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="wkb-1q-aUs">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9DS-Zn-GvF">
-                                <rect key="frame" x="211" y="306" width="62" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="LCZ-Ae-6CN">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Yjj-yZ-dPQ">
+                            <rect key="frame" x="166" y="5" width="61.333333333333343" height="34.333333333333336"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                        </button>
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="F4P-q4-dBZ"/>
+                        </centerItemGroups>
                     </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="8g7-CM-YUm" id="tlV-MB-Apf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1r-vX-QrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="4"/>
+            <point key="canvasLocation" x="1948.854961832061" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCa-vo-eiA">
