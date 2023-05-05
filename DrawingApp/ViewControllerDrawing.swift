@@ -11,8 +11,9 @@ class ViewControllerDrawing: UIViewController, PKCanvasViewDelegate, PKToolPicke
     
    
     @IBOutlet weak var canvasView: PKCanvasView!
+    var randomArray = ["House","School","Cat","Dog","Ice Cream","Sam Lim","Frog","Rainbow","Books","Basket","Rat","Popcorn","Bunny","Flowers","Egg","Llama Surfing","Pug on a treadmill",]
     
-    
+    @IBOutlet weak var randomOutlet: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,9 @@ class ViewControllerDrawing: UIViewController, PKCanvasViewDelegate, PKToolPicke
         }
     }
     
-  
     
+    @IBAction func randombutton(_ sender: UIBarButtonItem) {
+        randomOutlet.text = randomArray.randomElement()
+    }
     
 }
